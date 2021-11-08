@@ -11,7 +11,7 @@
 //     keys.push(key)
 //    values.push(apartment[key])
 // }
- 
+
 // 11===================================
 
 // const keys = [];
@@ -57,10 +57,10 @@
 //  const values = [];
 //  // Change code below this line
 // const keys = Object.keys(apartment);
- 
+
 // for (const key of keys) {
 //    values.push(apartment[key])
-   
+
 // }
 //  console.log(values);
 
@@ -74,7 +74,7 @@
 //    for (const key of keys) {
 //       propCount += 1;
 //    }
- 
+
 //    return propCount;
 //  }
 
@@ -117,14 +117,14 @@
 //    { hex: '#4caf50', rgb: '76,175,80' },
 //    { hex: '#ffeb3b', rgb: '255,235,59' },
 //  ];
- 
+
 //  const hexColors = [];
 // const rgbColors = [];
- 
+
 // for (const key of colors) {
 //    hexColors.push(key.hex)
 //    rgbColors.push(key.rgb)
-   
+
 // }
 
 // 18=======================================================
@@ -136,7 +136,7 @@
 //    { name: 'Droid', price: 400, quantity: 7 },
 //    { name: 'Grip', price: 1200, quantity: 9 },
 //  ];
- 
+
 //  function getProductPrice(productName) {
 //    for (const prod of products) {
 
@@ -158,7 +158,7 @@
 //    { name: 'Droid', price: 400, quantity: 7 },
 //    { name: 'Grip', price: 1200, quantity: 9 },
 //  ];
- 
+
 //  function getAllPropValues(propName) {
 //     const allValues = [];
 
@@ -175,30 +175,209 @@
 //     }
 //    return allValues;
 // }
- 
+
 // console.log(getAllPropValues("name")); //["Radar", "Scanner", "Droid", "Grip"]
 
 // 20=======================================
 // Напиши функцию calculateTotalPrice(productName) которая принимает один параметр productName - название товара. Функция должна вернуть общую стоимость (цена * количество) товара с таким именем из массива products.
 
-const products = [
-   { name: 'Radar', price: 1300, quantity: 4 },
-   { name: 'Scanner', price: 2700, quantity: 3 },
-   { name: 'Droid', price: 400, quantity: 7 },
-   { name: 'Grip', price: 1200, quantity: 9 },
- ];
+// const products = [
+//    { name: 'Radar', price: 1300, quantity: 4 },
+//    { name: 'Scanner', price: 2700, quantity: 3 },
+//    { name: 'Droid', price: 400, quantity: 7 },
+//    { name: 'Grip', price: 1200, quantity: 9 },
+//  ];
 
-function calculateTotalPrice(productName) {
-   let total = 0
+// function calculateTotalPrice(productName) {
+//    let total = 0
 
-   for (const prod of products) {
-      
-         if (prod.name === productName) {
-             total= prod.price * prod.quantity
-         }
-         
-      }
-   return total;
-}
+//    for (const prod of products) {
 
-console.log(calculateTotalPrice("Radar")); //5200
+//          if (prod.name === productName) {
+//              total= prod.price * prod.quantity
+//          }
+
+//       }
+//    return total;
+// }
+
+// console.log(calculateTotalPrice("Radar")); //5200
+
+// 26===========================================================================
+
+// Change code above this line
+// function calculateMeanTemperature(forecast) {
+//    const {
+//       today: {
+//          low: todayLow,
+//          high: todayHigh
+//       },
+//       tomorrow: {
+//          low: tomorrowLow,
+//          high: tomorrowHigh
+//       }
+//    } = forecast
+//    // Change code above this line
+//    return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+//  }
+
+// console.log(calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } }));
+
+
+// 28=======================================================
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// 30===================================
+
+// function makeTask(data) {
+//    const completed = false;
+//    const category = 'General';
+//    const priority = 'Normal';
+//    // Change code below this line
+//  return { category, priority, completed, ...data };
+//    // Change code above this line
+//  }
+// console.log(makeTask);
+
+// 31====================================================
+
+// function add(...args) {
+//    let total = 0;
+
+//    for (const arg of args) {
+//       total+=arg
+//    }
+//    return total
+//    // Change code above this line
+//  }
+
+// console.log(add(74, 11, 62, 46, 12, 36)); //241
+
+// 32=============================================
+// Функция addOverNum() считает сумму всех аргументов. Измени параметры и тело функции addOverNum() так, чтобы она считала сумму только тех аргументов, которые больше чем заданное число. Это число должно быть первым параметром функции.
+
+// function addOverNum(...args) {
+//    let total = 0;
+
+//    for (const arg of args) {
+//       console.log(arg);
+
+//       if (arg > args[0]) {
+//          total += arg;
+//       }
+//    }
+
+//    return total;
+
+//  }
+//  console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+
+// 33=====================================================
+
+// Change code below this line
+// function findMatches(arr, ...args) {
+//    const matches = []; // Don't change this line
+
+//    for (const arg of args) {
+//       if (arr.includes(arg)) {
+//          matches.push(arg)
+//       }
+//    }
+//    return matches;
+//  }
+
+//  console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41)); //[24, 9, 41]
+
+// 34===========================================================
+
+// const bookShelf = {
+//    // Change code below this line
+//    books: ['The last kingdom', 'The guardian of dreams'],
+//    getBooks() {
+//      return 'Returning all books';
+//    },
+//    addBook(bookName) {
+//      return `Adding book ${bookName}`;
+//    },
+//    removeBook(bookName) {
+//       return `Deleting book ${bookName}`;
+//    },
+//    updateBook(oldName, newName) {
+//    return `Updating book ${oldName} to ${newName}`
+//    }
+
+//    // Change code above this line
+//  };
+
+// 35====================================================================
+// Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books. Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
+
+// const bookShelf = {
+//    books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//    updateBook(oldName, newName) {
+//          const oldBook = this.books.indexOf(oldName);
+//          this.books.splice(oldBook, 1, newName);
+//          },
+//  };
+
+//  console.log(bookShelf.updateBook("The last kingdom", "Dune")); //["Dune", "Haze", "The guardian of dreams"]
+
+// 36========================================
+
+// const atTheOldToad = {
+//    potions : []
+//   };
+
+// 37======================================================
+
+// const atTheOldToad = {
+//   potions: ["Зелье скорости", "Дыхание дракона", "Каменная кожа"],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+// };
+
+// 38=-=====================================
+
+// const atTheOldToad = {
+//       potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//       addPotion(potionName) {
+//            this.potions.push(potionName)
+//       },
+// };
+// console.log(atTheOldToad.addPotion('Invisibility'));
+
+// 39=============================================
+// Дополни метод removePotion(potionName) так, чтобы он удалял зелье potionName из массива зелий в свойстве potions.
+
+// const atTheOldToad = {
+//       potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//       removePotion(potionName) {
+//             const potionIndex = this.potions.indexOf(potionName);
+//                 this.potions.splice(potionIndex, 1);
+//       },
+//     };
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+
+// 40=================================================
+// Дополни метод updatePotionName(oldName, newName) так, чтобы он обновлял название зелья с oldName на newName, в массиве зелий в свойстве potions.
+
+const atTheOldToad = {
+      potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+      updatePotionName(oldName, newName) {
+        // Change code below this line
+        const oldPotion = this.potions.indexOf(oldName);
+            this.potions.splice(oldPotion, 1, newName);
+        // Change code above this line
+      },
+    };
+    
+    console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
